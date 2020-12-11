@@ -8,10 +8,6 @@ interface Props {
   style?: CSSProperties;
 }
 
-export default ({children, className, ...rest}: Props) => {
-  return (
-    <View className={`${styles.layout} ${className}`} {...rest}>
-      {children}
-    </View>
-  );
+export default ({children,className, ...rest}: Props) => {
+  return <View className={`${styles.content} ${className}`} {...rest}>{children}</View>;
 };

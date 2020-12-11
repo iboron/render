@@ -3,15 +3,10 @@ import {View} from "@tarojs/components";
 import styles from "./index.module.less";
 
 interface Props {
-  children: object;
   className?: string;
   style?: CSSProperties;
 }
 
-export default ({children, className, ...rest}: Props) => {
-  return (
-    <View className={`${styles.layout} ${className}`} {...rest}>
-      {children}
-    </View>
-  );
+export default ({className, ...rest}: Props) => {
+  return <View className={`${styles.divider} ${className}`} {...rest}/>;
 };

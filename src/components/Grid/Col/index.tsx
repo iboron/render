@@ -4,13 +4,22 @@ import styles from "./index.module.less";
 
 interface Props {
   children: object;
+  span?: number;
   className?: string;
   style?: CSSProperties;
 }
 
-export default ({children, className, ...rest}: Props) => {
+export default ({children, span = 0, className, ...rest}: Props) => {
   return (
-    <View className={`${styles.layout} ${className}`} {...rest}>
+    <View
+      className={`
+      ${styles.col}
+      ${styles[`col-${span}`]}
+      ${className}
+      `}
+
+      {...rest}
+    >
       {children}
     </View>
   );

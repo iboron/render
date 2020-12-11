@@ -4,14 +4,10 @@ import styles from "./index.module.less";
 
 interface Props {
   children: object;
-  className?: string;
-  style?: CSSProperties;
+  style?: CSSProperties
+  className?: string
 }
 
 export default ({children, className, ...rest}: Props) => {
-  return (
-    <View className={`${styles.layout} ${className}`} {...rest}>
-      {children}
-    </View>
-  );
+  return <View className={`${styles.card} ${className}`} {...rest}>{children}</View>;
 };

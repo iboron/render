@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "@jetpomelo/applets-template",
-  "description": "",
+  "projectname": "@jetpomelo/template",
+  "description": "模版",
   "appid": "wx40469e6ac17ebf16",
   "setting": {
     "urlCheck": true,

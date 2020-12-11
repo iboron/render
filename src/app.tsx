@@ -1,8 +1,9 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import { store } from './models/store';
-import './app.scss';
+import React from "react";
+import {Provider} from "react-redux";
+import {store} from "./models/store";
 
-export default ({ children }) => {
+const App = ({children}) => {
   return <Provider store={store}>{children}</Provider>;
 };
+
+export default App;

@@ -1,3 +1,35 @@
+// 布局
+.container {
+  margin-top: -148px;
+  padding: 32px;
+}
+
+
+// 店铺名称
+.title {
+  padding-bottom: 16px;
+}
+
+// 店铺标签
+.tag {
+  margin: 0 8px;
+}
+
+
+.more {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin-top: 20px;
+  font-size: 28px;
+  padding: 16px ;
+}
+
+
+.info_basic_detail {
+  flex: 16;
+}
+
+
 .info {
   width: 100%;
   padding: 32px;
@@ -5,12 +37,11 @@
   border-radius: 8px;
   box-sizing: border-box;
 }
-.info_basic{
+
+.info_basic {
   display: flex;
 }
-.info_basic_detail {
-  flex: 16;
-}
+
 .info_basic_icon {
   flex: 4;
   display: flex;
@@ -21,26 +52,14 @@
   text-align: center;
   color: rgba(0, 0, 0, 0.6);
 }
-.info_basic_title {
-  font-weight: bold;
-  font-size: 42px;
-  padding-bottom: 16px;
-}
+
 .info_basic_desc {
   font-size: 22px;
   color: #aaaaaa;
 }
-.info_basic_tag {
-  background: rgb(234, 234, 234);
-  font-size: 22px;
-  padding: 2px 8px;
-  border-radius: 4px;
-  color: #aaaaaa;
-  margin: 0 8px;
-}
 
 
-.card{
+.card {
   width: 100%;
   padding: 32px;
   background: #fff;
@@ -50,15 +69,15 @@
 }
 
 
-
-
 .room {
   display: flex;
 
 }
+
 .room_img {
   flex: 7;
 }
+
 .room_img_view {
   height: 180px;
   background-repeat: no-repeat;
@@ -66,6 +85,7 @@
   background-position: center center;
   border-radius: 8px;
 }
+
 .room_info {
   flex: 13;
   display: flex;
@@ -73,28 +93,34 @@
   align-items: center;
   padding-left: 20px;
 }
+
 .room_info_title {
   font-weight: bold;
   margin-bottom: 8px;
 }
+
 .room_info_desc {
   font-size: 26px;
   color: #aaaaaa;
 }
+
 .room_info_price_icon {
   color: #e54d42;
   font-size: 20px;
 }
+
 .room_info_price {
   color: #e54d42;
 
 }
+
 .room_info_price_line {
   text-decoration: line-through;
   font-size: 26px;
   color: #aaaaaa;
   margin-left: 8px;
 }
+
 .room_info_price_tag {
   //background: #e54d42;
   color: #e54d42;
@@ -104,19 +130,21 @@
   margin-left: 8px;
 
 }
-.room_info_tag_blue{
+
+.room_info_tag_blue {
   border: 1px solid #2db7f5;
-  color:#2db7f5;
+  color: #2db7f5;
   border-radius: 8px;
-  padding:0 8px;
+  padding: 0 8px;
   font-size: 20px;
   margin-right: 8px;
 }
-.room_info_tag_green{
+
+.room_info_tag_green {
   border: 1px solid #87d068;
-  color:#87d068;
+  color: #87d068;
   border-radius: 8px;
-  padding:0 8px;
+  padding: 0 8px;
   font-size: 20px;
 
 }
@@ -128,28 +156,31 @@
   justify-items: center;
   align-items: center;
 }
-.room_button_layout{
+
+.room_button_layout {
   width: 80px;
   height: 90px;
   background: #e54d42;
   text-align: center;
   border-radius: 8px;
-  color:#ffffff;
+  color: #ffffff;
   position: relative;
   padding-top: 8px;
 }
-.room_button_detail{
+
+.room_button_detail {
   position: absolute;
   bottom: 4px;
 
   left: 4px;
   right: 4px;
 }
-.room_button_detail_text{
+
+.room_button_detail_text {
   font-size: 20px;
   text-align: center;
   background: white;
-  color:#e54d42;
+  color: #e54d42;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
@@ -160,17 +191,9 @@
 }
 
 
-// 内容展示
-.container {
-  padding: 20vh 32px 0;
-  position: relative;
-  z-index: 2;
-}
-
-
 // 技术支持
-.support{
-  color:rgba(0,0,0,0.4);
+.support {
+  color: rgba(0, 0, 0, 0.4);
   text-align: center;
   margin: 32px 0;
   font-size: 26px;
