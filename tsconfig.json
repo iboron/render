@@ -14,6 +14,10 @@
     "strictNullChecks": true,
     "sourceMap": true,
     "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["./src/components/*"],
+      "@/models/*": ["./src/models/*"],
+    },
     "rootDir": ".",
     "jsx": "react",
     "jsxFactory": "React.createElement",

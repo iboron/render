@@ -1,3 +1,5 @@
+const path = require("path");
+
 const config = {
   projectName: '@jetpomelo/template',
   date: '2021-1-29',
@@ -9,6 +11,10 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
+  alias: {
+    '@/components': path.resolve(__dirname, '..', 'src/components'),
+    '@/models': path.resolve(__dirname, '..', 'src/models'),
+  },
   plugins: [],
   defineConstants: {
   },
@@ -16,6 +22,7 @@ const config = {
     patterns: [
     ],
     options: {
+
     }
   },
   framework: 'react',

@@ -1,0 +1,471 @@
+/**
+ * ============================================
+ * 盒模型
+ * ============================================
+ *
+ * 添加常用盒模型属性
+ * 1. width
+ * 2. height
+ * 3. position
+ * 4. zIndex
+ * 5. top bottom left right
+ * 6. margin padding
+ * 7. radius
+ */
+
+// width-*
+@for $i from 1 through 24 {
+  .width-#{$i} {
+    width: $i * 2px;
+  }
+}
+
+// width-lr-*
+@for $i from 1 through 24 {
+  .width-lr-#{$i} {
+    width: 0 $i * 2px;
+  }
+}
+
+
+// width-tb-*
+@for $i from 1 through 24 {
+  .width-tb-#{$i} {
+    width: $i * 2px 0;
+  }
+}
+
+
+// height-*
+@for $i from 1 through 24 {
+  .height-#{$i} {
+    height: $i * 2px;
+  }
+}
+
+
+// height-lr-*
+@for $i from 1 through 24 {
+  .height-lr-#{$i} {
+    height: 0 $i * 2px;
+  }
+}
+
+
+// height-tb-*
+@for $i from 1 through 24 {
+  .height-tb-#{$i} {
+    height: $i * 2px 0;
+  }
+}
+
+.position {
+  position: relative;
+}
+
+.position-abs {
+  position: absolute;
+}
+
+// zIndex-*
+@for $i from 1 through 24 {
+  .zIndex-#{$i} {
+    z-index: $i;
+  }
+}
+
+// top-*
+@for $i from 1 through 24 {
+  .top-#{$i} {
+    top: $i*2px;
+  }
+}
+
+// bottom-*
+@for $i from 1 through 24 {
+  .bottom-#{$i} {
+    bottom: $i*2px;
+  }
+}
+
+// left-*
+@for $i from 1 through 24 {
+  .left-#{$i} {
+    left: $i*2px;
+  }
+}
+
+// right-*
+@for $i from 1 through 24 {
+  .right-#{$i} {
+    right: $i*2px;
+  }
+}
+
+
+.margin-auto {
+  margin: auto;
+}
+
+// margin-*
+@for $i from 1 through 24 {
+  .margin-#{$i} {
+    margin: $i*2px;
+  }
+}
+
+
+// margin-lr-*
+@for $i from 1 through 24 {
+  .margin-lr-#{$i} {
+    margin-left: $i * 2px;
+    margin-right: $i * 2px;
+  }
+}
+
+
+// margin-tb-*
+@for $i from 1 through 24 {
+  .margin-tb-#{$i} {
+    margin-top: $i * 2px;
+    margin-bottom: $i * 2px;
+  }
+}
+
+
+// padding-*
+@for $i from 1 through 24 {
+  .padding-#{$i} {
+    padding: $i*2px;
+  }
+}
+
+
+// padding-lr-*
+@for $i from 1 through 24 {
+  .padding-lr-#{$i} {
+    padding-left: $i * 2px;
+    padding-right: $i * 2px;
+  }
+}
+
+
+// padding-tb-*
+@for $i from 1 through 24 {
+  .padding-tb-#{$i} {
+    padding-top: $i * 2px;
+    padding-bottom: $i * 2px;
+  }
+}
+
+// radius-*
+@for $i from 1 through 24 {
+  .radius-#{$i} {
+    border-radius: $i * 2px;
+  }
+}
+
+
+/**
+ * ============================================
+ * 文字
+ * ============================================
+ *
+ * 1. text-*
+ * 2. text-bold
+ * 3. text-left/right-center
+ * 4. text-shadow-*
+ *
+ */
+
+@for $i from 1 through 24 {
+  .text-#{$i} {
+    font-size: $i * 2px;
+  }
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+
+.text-shadow-red {
+  text-shadow: 6px 6px 8px rgba(204, 69, 59, 0.2);
+}
+
+.text-shadow-orange {
+  text-shadow: 6px 6px 8px rgba(217, 109, 26, 0.2);
+}
+
+.text-shadow-yellow {
+  text-shadow: 6px 6px 8px rgba(224, 170, 7, 0.2);
+}
+
+.text-shadow-olive {
+  text-shadow: 6px 6px 8px rgba(124, 173, 55, 0.2);
+}
+
+.text-shadow-green {
+  text-shadow: 6px 6px 8px rgba(48, 156, 63, 0.2);
+}
+
+.text-shadow-cyan {
+  text-shadow: 6px 6px 8px rgba(28, 187, 180, 0.2);
+}
+
+.text-shadow-blue {
+  text-shadow: 6px 6px 8px rgba(0, 102, 204, 0.2);
+}
+
+.text-shadow-purple {
+  text-shadow: 6px 6px 8px rgba(88, 48, 156, 0.2);
+}
+
+.text-shadow-mauve {
+  text-shadow: 6px 6px 8px rgba(133, 33, 150, 0.2);
+}
+
+.text-shadow-pink {
+  text-shadow: 6px 6px 8px rgba(199, 50, 134, 0.2);
+}
+
+.text-shadow-brown {
+  text-shadow: 6px 6px 8px rgba(140, 88, 53, 0.2);
+}
+
+.text-shadow-grey {
+  text-shadow: 6px 6px 8px rgba(114, 130, 138, 0.2);
+}
+
+.text-shadow-gray {
+  text-shadow: 6px 6px 8px rgba(114, 130, 138, 0.2);
+}
+
+.text-shadow-black {
+  text-shadow: 6px 6px 8px rgba(26, 26, 26, 0.2);
+}
+
+
+/**
+ * ============================================
+ * 布局
+ * ============================================
+ *
+ * 为了兼容react-native 全局使用 flex 进行布局
+ *
+ */
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.justify-center {
+  justify-content: center;
+  justify-items: center;
+}
+
+.justify-left {
+  justify-items: start;
+  justify-content: start;
+}
+
+.justify-right {
+  justify-items: end;
+  justify-content: end;
+}
+
+.align-center {
+  align-items: center;
+  align-self: center;
+}
+
+.align-left {
+  align-items: start;
+  align-self: start;
+}
+
+.align-right {
+  align-items: end;
+  align-self: end;
+}
+
+// flex-*
+@for $i from 1 through 24 {
+  .flex-#{$i} {
+    flex: $i;
+  }
+}
+
+
+/**
+ * ============================================
+ * 色彩
+ * ============================================
+ *
+ * 1. 文字色彩
+ * 2. 背景色彩
+ *
+ */
+
+// 文字色
+.text-red {
+  color: #e54d42;
+}
+
+.text-orange {
+  color: #f37b1d;
+}
+
+.text-yellow {
+  color: #fbbd08;
+}
+
+.text-olive {
+  color: #8dc63f;
+}
+
+.text-green {
+  color: #39b54a;
+}
+
+.text-cyan {
+  color: #1cbbb4;
+}
+
+.text-blue {
+  color: #0081ff;
+}
+
+.text-purple {
+  color: #6739b6;
+}
+
+.text-mauve {
+  color: #9c26b0;
+}
+
+.text-pink {
+  color: #e03997;
+}
+
+.text-brown {
+  color: #a5673f;
+}
+
+.text-grey {
+  color: #8799a3;
+}
+
+.text-gray {
+  color: #aaaaaa;
+}
+
+.text-black {
+  color: #333333;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+// 背景色
+.bg-red {
+  background-color: #e54d42;
+  color: #ffffff;
+}
+
+.bg-orange {
+  background-color: #f37b1d;
+  color: #ffffff;
+}
+
+.bg-yellow {
+  background-color: #fbbd08;
+  color: #333333;
+}
+
+.bg-olive {
+  background-color: #8dc63f;
+  color: #ffffff;
+}
+
+.bg-green {
+  background-color: #39b54a;
+  color: #ffffff;
+}
+
+.bg-cyan {
+  background-color: #1cbbb4;
+  color: #ffffff;
+}
+
+.bg-blue {
+  background-color: #0081ff;
+  color: #ffffff;
+}
+
+.bg-purple {
+  background-color: #6739b6;
+  color: #ffffff;
+}
+
+.bg-mauve {
+  background-color: #9c26b0;
+  color: #ffffff;
+}
+
+.bg-pink {
+  background-color: #e03997;
+  color: #ffffff;
+}
+
+.bg-brown {
+  background-color: #a5673f;
+  color: #ffffff;
+}
+
+.bg-grey {
+  background-color: #8799a3;
+  color: #ffffff;
+}
+
+.bg-gray {
+  background-color: #f0f0f0;
+  color: #333333;
+}
+
+.bg-black {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.bg-white {
+  background-color: #ffffff;
+  color: #666666;
+}
