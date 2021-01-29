@@ -1,11 +1,6 @@
-import React from 'react';
-import { View,} from '@tarojs/components';
-
+import React from "react";
+import {View} from "@tarojs/components";
 
 export default () => {
-
-
-  return (
-    <View />
-  );
+  return <View/>;
 };

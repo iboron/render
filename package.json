@@ -1,10 +1,10 @@
 {
-  "name": "@jetpomelo/applets-template",
+  "name": "@jetpomelo/template",
   "version": "1.0.0",
   "private": true,
   "description": "",
   "templateInfo": {
-    "name": "redux",
+    "name": "default",
     "typescript": true,
     "css": "sass"
   },
@@ -34,35 +34,34 @@
     "ios >= 8"
   ],
   "author": "",
-  "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
-    "@tarojs/components": "3.0.16",
-    "@tarojs/react": "3.0.16",
-    "@tarojs/runtime": "3.0.16",
-    "@tarojs/taro": "3.0.16",
-    "ahooks": "^2.9.1",
-    "immer": "^7.0.14",
-    "react": "^16.10.0",
-    "react-dom": "^16.10.0",
-    "react-redux": "^7.2.2",
-    "redux": "^4.0.5"
+    "@rematch/core": "^1.4.0",
+    "@rematch/immer": "^2.0.0-next.10",
+    "@tarojs/components": "3.0.25",
+    "@tarojs/react": "3.0.25",
+    "@tarojs/runtime": "3.0.25",
+    "@tarojs/taro": "3.0.25",
+    "immer": "^8.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",
-    "@tarojs/mini-runner": "3.0.16",
-    "@tarojs/webpack-runner": "3.0.16",
-    "@types/react": "^16.0.0",
+    "@tarojs/mini-runner": "3.0.25",
+    "@tarojs/webpack-runner": "3.0.25",
+    "@types/react": "^17.0.0",
     "@types/webpack-env": "^1.13.6",
-    "@typescript-eslint/eslint-plugin": "^2.x",
-    "@typescript-eslint/parser": "^2.x",
-    "babel-preset-taro": "3.0.16",
-    "eslint": "^6.8.0",
-    "eslint-config-taro": "3.0.16",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "babel-preset-taro": "3.0.25",
+    "eslint": "^7.18.0",
+    "eslint-config-taro": "3.0.25",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-react": "^7.8.2",
-    "eslint-plugin-react-hooks": "^1.6.1",
-    "stylelint": "9.3.0",
-    "typescript": "^3.7.0"
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "stylelint": "13.9.0",
+    "typescript": "^4.1.3"
   }
 }

@@ -1,4 +1,10 @@
-import { createStore } from 'redux';
-import { reducer } from './reducer';
+import {createModel} from '@rematch/core'
 
-export const store = createStore(reducer);
+export const store = createModel({
+  state: {
+    type: 0,
+    title: '君豪宾馆',
+    logo: '',
+    desc: '',
+  },
+});
