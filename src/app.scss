@@ -1,5 +1,21 @@
 /**
  * ============================================
+ * 工具样式
+ * ============================================
+ *
+ */
+page {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  background: #f0f0f0;
+}
+
+
+
+
+/**
+ * ============================================
  * 盒模型
  * ============================================
  *
@@ -14,48 +30,48 @@
  */
 
 // width-*
-@for $i from 1 through 24 {
+@for $i from 1 to 49 {
   .width-#{$i} {
-    width: $i * 2px;
+    width: $i * 4px;
   }
 }
 
 // width-lr-*
-@for $i from 1 through 24 {
+@for $i from 1 to 49 {
   .width-lr-#{$i} {
-    width: 0 $i * 2px;
+    width: 0 $i * 4px;
   }
 }
 
 
 // width-tb-*
-@for $i from 1 through 24 {
+@for $i from 1 to 49 {
   .width-tb-#{$i} {
-    width: $i * 2px 0;
+    width: $i * 4px 0;
   }
 }
 
 
 // height-*
-@for $i from 1 through 24 {
+@for $i from 1 to 49 {
   .height-#{$i} {
-    height: $i * 2px;
+    height: $i * 4px;
   }
 }
 
 
 // height-lr-*
-@for $i from 1 through 24 {
+@for $i from 1 to 49 {
   .height-lr-#{$i} {
-    height: 0 $i * 2px;
+    height: 0 $i * 4px;
   }
 }
 
 
 // height-tb-*
-@for $i from 1 through 24 {
+@for $i from 1 to 49 {
   .height-tb-#{$i} {
-    height: $i * 2px 0;
+    height: $i * 4px 0;
   }
 }
 
@@ -68,37 +84,37 @@
 }
 
 // zIndex-*
-@for $i from 1 through 24 {
+@for $i from 1 to 49 {
   .zIndex-#{$i} {
     z-index: $i;
   }
 }
 
 // top-*
-@for $i from 1 through 24 {
+@for $i from 1 to 49 {
   .top-#{$i} {
-    top: $i*2px;
+    top: $i * 4px;
   }
 }
 
 // bottom-*
-@for $i from 1 through 24 {
+@for $i from 1 to 49 {
   .bottom-#{$i} {
-    bottom: $i*2px;
+    bottom: $i * 4px;
   }
 }
 
 // left-*
-@for $i from 1 through 24 {
+@for $i from 1 to 49 {
   .left-#{$i} {
-    left: $i*2px;
+    left: $i * 4px;
   }
 }
 
 // right-*
-@for $i from 1 through 24 {
+@for $i from 1 to 49 {
   .right-#{$i} {
-    right: $i*2px;
+    right: $i * 4px;
   }
 }
 
@@ -108,60 +124,88 @@
 }
 
 // margin-*
-@for $i from 1 through 24 {
+@for $i from 1 to 49 {
   .margin-#{$i} {
-    margin: $i*2px;
+    margin: $i * 4px;
+  }
+}
+
+// margin-right-*
+@for $i from 1 to 49 {
+  .margin-right-#{$i} {
+    margin-right: $i * 4px;
+  }
+}
+
+// margin-top-*
+@for $i from 1 to 49 {
+  .margin-top-#{$i} {
+    margin-top: $i * 4px;
+  }
+}
+
+// margin-bottom-*
+@for $i from 1 to 49 {
+  .margin-bottom-#{$i} {
+    margin-bottom: $i * 4px;
+  }
+}
+
+// margin-left-*
+@for $i from 1 to 49 {
+  .margin-left-#{$i} {
+    margin-left: $i * 4px;
   }
 }
 
 
 // margin-lr-*
-@for $i from 1 through 24 {
+@for $i from 1 to 49 {
   .margin-lr-#{$i} {
-    margin-left: $i * 2px;
-    margin-right: $i * 2px;
+    margin-left: $i * 4px;
+    margin-right: $i * 4px;
   }
 }
 
 
 // margin-tb-*
-@for $i from 1 through 24 {
+@for $i from 1 to 49 {
   .margin-tb-#{$i} {
-    margin-top: $i * 2px;
-    margin-bottom: $i * 2px;
+    margin-top: $i * 4px;
+    margin-bottom: $i * 4px;
   }
 }
 
 
 // padding-*
-@for $i from 1 through 24 {
+@for $i from 1 to 49 {
   .padding-#{$i} {
-    padding: $i*2px;
+    padding: $i * 4px;
   }
 }
 
 
 // padding-lr-*
-@for $i from 1 through 24 {
+@for $i from 1 to 49 {
   .padding-lr-#{$i} {
-    padding-left: $i * 2px;
-    padding-right: $i * 2px;
+    padding-left: $i * 4px;
+    padding-right: $i * 4px;
   }
 }
 
 
 // padding-tb-*
-@for $i from 1 through 24 {
+@for $i from 1 to 49 {
   .padding-tb-#{$i} {
-    padding-top: $i * 2px;
-    padding-bottom: $i * 2px;
+    padding-top: $i * 4px;
+    padding-bottom: $i * 4px;
   }
 }
 
 // radius-*
-@for $i from 1 through 24 {
+@for $i from 1 to 49 {
   .radius-#{$i} {
-    border-radius: $i * 2px;
+    border-radius: $i * 4px;
   }
 }
 
@@ -178,9 +222,9 @@
  *
  */
 
-@for $i from 1 through 24 {
+@for $i from 1 to 49 {
   .text-#{$i} {
-    font-size: $i * 2px;
+    font-size: $i * 4px;
   }
 }
 
@@ -199,7 +243,6 @@
 .text-right {
   text-align: right;
 }
-
 
 .text-shadow-red {
   text-shadow: 6px 6px 8px rgba(204, 69, 59, 0.2);
@@ -316,7 +359,7 @@
 }
 
 // flex-*
-@for $i from 1 through 24 {
+@for $i from 1 to 25 {
   .flex-#{$i} {
     flex: $i;
   }

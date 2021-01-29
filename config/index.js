@@ -3,8 +3,9 @@ const path = require("path");
 const config = {
   projectName: '@jetpomelo/template',
   date: '2021-1-29',
-  designWidth: 750,
+  designWidth: 375,
   deviceRatio: {
+    375: 2,
     640: 2.34 / 2,
     750: 1,
     828: 1.81 / 2
@@ -14,16 +15,15 @@ const config = {
   alias: {
     '@/components': path.resolve(__dirname, '..', 'src/components'),
     '@/models': path.resolve(__dirname, '..', 'src/models'),
+    '@/assets': path.resolve(__dirname, '..', 'src/assets'),
+    '@/type': path.resolve(__dirname, '..', 'src/type'),
   },
   plugins: [],
   defineConstants: {
   },
   copy: {
-    patterns: [
-    ],
-    options: {
-
-    }
+    patterns: [],
+    options: {}
   },
   framework: 'react',
   mini: {
@@ -69,7 +69,7 @@ const config = {
   }
 }
 
-module.exports = function (merge) {
+module.exports = (merge) => {
   if (process.env.NODE_ENV === 'development') {
     return merge({}, config, require('./dev'))
   }

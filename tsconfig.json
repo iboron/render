@@ -17,6 +17,12 @@
     "paths": {
       "@/components/*": ["./src/components/*"],
       "@/models/*": ["./src/models/*"],
+      "@/type/*": [
+        "./src/type/*"
+      ],
+      "@/assets/*": [
+        "./src/assets/*"
+      ]
     },
     "rootDir": ".",
     "jsx": "react",
