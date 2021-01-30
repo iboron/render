@@ -1,94 +1,127 @@
 /**
  * ============================================
- * 工具样式
+ * 模块概览
  * ============================================
- *
+ * 1. theme
+ * 2. layout
+ * 3. flex
+ * 4. box alignment
+ * 5. spacing
+ * 6. sizing
+ * 7. typography
+ * 8. background
+ * 9. border
  */
-page {
-  position: relative;
-  width: 100%;
-  min-height: 100%;
-  background: #f0f0f0;
-}
-
-
 
 
 /**
  * ============================================
- * 盒模型
+ * 主题样式
  * ============================================
+ * 1. color 颜色，如需更换主题色，请参考链接 https://tailwindcss.com/docs/customizing-colors
  *
- * 添加常用盒模型属性
- * 1. width
- * 2. height
- * 3. position
- * 4. zIndex
- * 5. top bottom left right
- * 6. margin padding
- * 7. radius
  */
 
-// width-*
-@for $i from 1 to 49 {
-  .width-#{$i} {
-    width: $i * 4px;
-  }
+page {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
 }
 
-// width-lr-*
-@for $i from 1 to 49 {
-  .width-lr-#{$i} {
-    width: 0 $i * 4px;
-  }
+$gray: #F9FAFB, #F3F4F6, #E5E7EB, #D1D5DB, #9CA3AF, #6B7280, #4B5563, #374151, #1F2937, #111827;
+$red: #FEF2F2, #FEE2E2, #FECACA, #FCA5A5, #F87171, #EF4444, #DC2626, #B91C1C, #991B1B, #7F1D1D;
+$yellow: #FEFCE8, #FEF9C3, #FEF08A, #FDE047, #FACC15, #EAB308, #CA8A04, #A16207, #854D0E, #713F12;
+$green: #ECFDF5, #D1FAE5, #A7F3D0, #6EE7B7, #34D399, #10B981, #059669, #047857, #065F46, #064E3B;
+$blue: #EFF6FF, #DBEAFE, #BFDBFE, #93C5FD, #60A5FA, #3B82F6, #2563EB, #1D4ED8, #1E40AF, #1E3A8A;
+$indigo: #EEF2FF, #E0E7FF, #C7D2FE, #A5B4FC, #818CF8, #6366F1, #4F46E5, #4338CA, #3730A3, #312E81;
+$purple: #F5F3FF, #EDE9FE, #DDD6FE, #C4B5FD, #A78BFA, #8B5CF6, #7C3AED, #6D28D9, #5B21B6, #4C1D95;
+$pink: #FDF2F8, #FCE7F3, #FBCFE8, #F9A8D4, #F472B6, #EC4899, #DB2777, #BE185D, #9D174D, #831843;
+
+
+/**
+ * ============================================
+ * layout 布局
+ * ============================================
+ * 1. flex
+ * 2. position (relative/absolut)
+ * 3. overflow
+ * 4. zIndex
+ * 5. top/bottom/left/right
+ */
+
+.flex {
+  display: flex;
 }
 
-
-// width-tb-*
-@for $i from 1 to 49 {
-  .width-tb-#{$i} {
-    width: $i * 4px 0;
-  }
-}
-
-
-// height-*
-@for $i from 1 to 49 {
-  .height-#{$i} {
-    height: $i * 4px;
-  }
-}
-
-
-// height-lr-*
-@for $i from 1 to 49 {
-  .height-lr-#{$i} {
-    height: 0 $i * 4px;
-  }
-}
-
-
-// height-tb-*
-@for $i from 1 to 49 {
-  .height-tb-#{$i} {
-    height: $i * 4px 0;
-  }
-}
-
-.position {
+.relative {
   position: relative;
 }
 
-.position-abs {
+.absolute {
   position: absolute;
 }
 
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.overflow-x-visible {
+  overflow-x: visible;
+}
+
+.overflow-y-visible {
+  overflow-y: visible;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+
 // zIndex-*
-@for $i from 1 to 49 {
+
+.zIndex-auto {
+  z-index: auto;
+}
+
+@for $i from 1 to 20 {
   .zIndex-#{$i} {
     z-index: $i;
   }
 }
+
 
 // top-*
 @for $i from 1 to 49 {
@@ -119,117 +152,405 @@ page {
 }
 
 
-.margin-auto {
-  margin: auto;
+/**
+ * ============================================
+ * flex
+ * ============================================
+ *
+ * 为了兼容react-native 全局使用 flex 进行布局
+ *
+ */
+
+.flex-row {
+  flex-direction: row;
 }
 
-// margin-*
-@for $i from 1 to 49 {
-  .margin-#{$i} {
-    margin: $i * 4px;
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+
+// flex-*
+@for $i from 1 to 25 {
+  .flex-#{$i} {
+    flex: $i;
   }
 }
 
-// margin-right-*
-@for $i from 1 to 49 {
-  .margin-right-#{$i} {
-    margin-right: $i * 4px;
-  }
+.flex-auto {
+  flex: 1 1 auto;
 }
 
-// margin-top-*
-@for $i from 1 to 49 {
-  .margin-top-#{$i} {
-    margin-top: $i * 4px;
-  }
+.flex-initial {
+  flex: 0 1 auto;
 }
 
-// margin-bottom-*
-@for $i from 1 to 49 {
-  .margin-bottom-#{$i} {
-    margin-bottom: $i * 4px;
-  }
+.flex-none {
+  flex: none;
 }
 
-// margin-left-*
-@for $i from 1 to 49 {
-  .margin-left-#{$i} {
-    margin-left: $i * 4px;
-  }
+.flex-grow-0 {
+  flex-grow: 0;
 }
 
+.flex-grow {
+  flex-grow: 1;
+}
 
-// margin-lr-*
-@for $i from 1 to 49 {
-  .margin-lr-#{$i} {
-    margin-left: $i * 4px;
-    margin-right: $i * 4px;
-  }
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
 }
 
 
-// margin-tb-*
-@for $i from 1 to 49 {
-  .margin-tb-#{$i} {
-    margin-top: $i * 4px;
-    margin-bottom: $i * 4px;
-  }
+/**
+ * ============================================
+ * box alignment 盒模型对齐
+ * ============================================
+ *
+ * 依托于 flex 进行使用
+ *
+ */
+
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-left {
+
+  justify-content: start;
+}
+
+.justify-right {
+
+  justify-content: end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.content-center {
+  align-content: center;
+}
+
+.content-start {
+  align-content: flex-start;
+}
+
+.content-end {
+  align-content: flex-end;
+}
+
+.content-between {
+  align-content: space-between;
+}
+
+.content-around {
+  align-content: space-around;
+}
+
+.content-evenly {
+  align-content: space-evenly;
+}
+
+.items-center {
+  align-items: center;
+
+}
+
+.items-left {
+  align-items: flex-start;
+
+}
+
+.items-right {
+  align-items: flex-end;
+
+}
+
+.items-baseline {
+  align-items: baseline;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+.self-auto {
+  align-self: auto;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-stretch {
+  align-self: stretch;
 }
 
 
-// padding-*
-@for $i from 1 to 49 {
-  .padding-#{$i} {
+/**
+ * ============================================
+ * spacing 间距控制
+ * ============================================
+ *
+ * 添加常用盒模型属性
+ * 1. padding
+ * 2. margin
+ */
+
+
+// p-*
+@for $i from 1 to 101 {
+  .p-#{$i} {
     padding: $i * 4px;
   }
 }
 
-
-// padding-lr-*
-@for $i from 1 to 49 {
-  .padding-lr-#{$i} {
+// px-*
+@for $i from 1 to 101 {
+  .px-#{$i} {
     padding-left: $i * 4px;
     padding-right: $i * 4px;
   }
 }
 
-
-// padding-tb-*
-@for $i from 1 to 49 {
-  .padding-tb-#{$i} {
+// py-*
+@for $i from 1 to 101 {
+  .py-#{$i} {
     padding-top: $i * 4px;
     padding-bottom: $i * 4px;
   }
 }
 
-// radius-*
-@for $i from 1 to 49 {
-  .radius-#{$i} {
-    border-radius: $i * 4px;
+// pt-*
+@for $i from 1 to 101 {
+  .pt-#{$i} {
+    padding-top: $i * 4px;
+  }
+}
+
+// pr-*
+@for $i from 1 to 101 {
+  .pr-#{$i} {
+    padding-right: $i * 4px;
+  }
+}
+
+// pb-*
+@for $i from 1 to 101 {
+  .pb-#{$i} {
+    padding-bottom: $i * 4px;
+  }
+}
+
+// pl-*
+@for $i from 1 to 101 {
+  .pl-#{$i} {
+    padding-left: $i * 4px;
+  }
+}
+
+.m-auto {
+  margin: auto;
+}
+
+// m-*
+@for $i from 1 to 101 {
+  .m-#{$i} {
+    margin: $i * 4px;
+  }
+}
+
+// mx-*
+@for $i from 1 to 101 {
+  .mx-#{$i} {
+    margin-left: $i * 4px;
+    margin-right: $i * 4px;
+  }
+}
+
+// my-*
+@for $i from 1 to 101 {
+  .my-#{$i} {
+    margin-top: $i * 4px;
+    margin-bottom: $i * 4px;
+  }
+}
+
+// mt-*
+@for $i from 1 to 101 {
+  .mt-#{$i} {
+    margin-top: $i * 4px;
+  }
+}
+
+// mr-*
+@for $i from 1 to 101 {
+  .mr-#{$i} {
+    margin-right: $i * 4px;
+  }
+}
+
+// mb-*
+@for $i from 1 to 101 {
+  .mb-#{$i} {
+    margin-bottom: $i * 4px;
+  }
+}
+
+// ml-*
+@for $i from 1 to 101 {
+  .ml-#{$i} {
+    margin-left: $i * 4px;
   }
 }
 
 
 /**
  * ============================================
- * 文字
+ * sizing 尺寸
+ * ============================================
+ *
+ * 1. width
+ * 2. height
+ */
+
+
+// w-*
+@for $i from 1 to 101 {
+  .w-#{$i} {
+    width: $i * 4px;
+  }
+}
+
+.w-full {
+  width: 100%;
+}
+
+
+// h-*
+@for $i from 1 to 101 {
+  .h-#{$i} {
+    height: $i * 4px;
+  }
+}
+
+.h-full {
+  height: 100%;
+}
+
+
+/**
+ * ============================================
+ * typography文字
  * ============================================
  *
  * 1. text-*
- * 2. text-bold
- * 3. text-left/right-center
- * 4. text-shadow-*
+ * 2. italic 文字倾斜
+ * 3. font-(thin,....) 文字粗细
+ * 4. lending 文字间距
+ * 5. align 文字对齐方式
+ * 6. color
+ * 7. shadow
  *
  */
 
-@for $i from 1 to 49 {
+@for $i from 1 to 101 {
   .text-#{$i} {
     font-size: $i * 4px;
   }
 }
 
-.text-bold {
-  font-weight: bold;
+.italic {
+  font-style: italic;
+}
+
+.font-thin {
+  font-weight: 100;
+}
+
+.font-extralight {
+  font-weight: 200;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+@for $i from 1 to 101 {
+  .lending-#{$i} {
+    line-height: $i * 1px;
+  }
 }
 
 .text-center {
@@ -244,28 +565,77 @@ page {
   text-align: right;
 }
 
-.text-shadow-red {
-  text-shadow: 6px 6px 8px rgba(204, 69, 59, 0.2);
+.text-justify {
+  text-align: justify;
 }
 
-.text-shadow-orange {
-  text-shadow: 6px 6px 8px rgba(217, 109, 26, 0.2);
+
+@for $i from 1 to 11 {
+  @each $color in $gray {
+    .text-gray-#{$i} {
+      color: $color;
+    }
+  }
+  @each $color in $red {
+    .text-red-#{$i} {
+      color: $color;
+    }
+  }
+  @each $color in $yellow {
+    .text-yellow-#{$i} {
+      color: $color;
+    }
+  }
+  @each $color in $green {
+    .text-green-#{$i} {
+      color: $color;
+    }
+  }
+  @each $color in $blue {
+    .text-blue-#{$i} {
+      color: $color;
+    }
+  }
+  @each $color in $indigo {
+    .text-indigo-#{$i} {
+      color: $color;
+    }
+  }
+  @each $color in $purple {
+    .text-purple-#{$i} {
+      color: $color;
+    }
+  }
+  @each $color in $pink {
+    .text-pink-#{$i} {
+      color: $color;
+    }
+  }
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-black {
+  color: #000000;
+}
+
+
+.text-shadow-gray {
+  text-shadow: 6px 6px 8px rgba(114, 130, 138, 0.2);
+}
+
+.text-shadow-red {
+  text-shadow: 6px 6px 8px rgba(204, 69, 59, 0.2);
 }
 
 .text-shadow-yellow {
   text-shadow: 6px 6px 8px rgba(224, 170, 7, 0.2);
 }
 
-.text-shadow-olive {
-  text-shadow: 6px 6px 8px rgba(124, 173, 55, 0.2);
-}
-
 .text-shadow-green {
   text-shadow: 6px 6px 8px rgba(48, 156, 63, 0.2);
-}
-
-.text-shadow-cyan {
-  text-shadow: 6px 6px 8px rgba(28, 187, 180, 0.2);
 }
 
 .text-shadow-blue {
@@ -276,239 +646,94 @@ page {
   text-shadow: 6px 6px 8px rgba(88, 48, 156, 0.2);
 }
 
-.text-shadow-mauve {
-  text-shadow: 6px 6px 8px rgba(133, 33, 150, 0.2);
-}
-
 .text-shadow-pink {
   text-shadow: 6px 6px 8px rgba(199, 50, 134, 0.2);
-}
-
-.text-shadow-brown {
-  text-shadow: 6px 6px 8px rgba(140, 88, 53, 0.2);
-}
-
-.text-shadow-grey {
-  text-shadow: 6px 6px 8px rgba(114, 130, 138, 0.2);
-}
-
-.text-shadow-gray {
-  text-shadow: 6px 6px 8px rgba(114, 130, 138, 0.2);
 }
 
 .text-shadow-black {
   text-shadow: 6px 6px 8px rgba(26, 26, 26, 0.2);
 }
 
+.text-shadow-indigo {
+  text-shadow: 6px 6px 8px rgba(133, 33, 150, 0.2);
+}
+
 
 /**
  * ============================================
- * 布局
+ * background 背景
  * ============================================
- *
- * 为了兼容react-native 全局使用 flex 进行布局
+ * 1. bg-*
  *
  */
 
-.flex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
 
-.flex-column {
-  flex-direction: column;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
-.flex-nowrap {
-  flex-wrap: nowrap;
-}
-
-.justify-center {
-  justify-content: center;
-  justify-items: center;
-}
-
-.justify-left {
-  justify-items: start;
-  justify-content: start;
-}
-
-.justify-right {
-  justify-items: end;
-  justify-content: end;
-}
-
-.align-center {
-  align-items: center;
-  align-self: center;
-}
-
-.align-left {
-  align-items: start;
-  align-self: start;
-}
-
-.align-right {
-  align-items: end;
-  align-self: end;
-}
-
-// flex-*
-@for $i from 1 to 25 {
-  .flex-#{$i} {
-    flex: $i;
+@for $i from 1 to 11 {
+  @each $color in $gray {
+    .bg-gray-#{$i} {
+      color: $color;
+    }
   }
-}
-
-
-/**
- * ============================================
- * 色彩
- * ============================================
- *
- * 1. 文字色彩
- * 2. 背景色彩
- *
- */
-
-// 文字色
-.text-red {
-  color: #e54d42;
-}
-
-.text-orange {
-  color: #f37b1d;
-}
-
-.text-yellow {
-  color: #fbbd08;
-}
-
-.text-olive {
-  color: #8dc63f;
-}
-
-.text-green {
-  color: #39b54a;
-}
-
-.text-cyan {
-  color: #1cbbb4;
-}
-
-.text-blue {
-  color: #0081ff;
-}
-
-.text-purple {
-  color: #6739b6;
-}
-
-.text-mauve {
-  color: #9c26b0;
-}
-
-.text-pink {
-  color: #e03997;
-}
-
-.text-brown {
-  color: #a5673f;
-}
-
-.text-grey {
-  color: #8799a3;
-}
-
-.text-gray {
-  color: #aaaaaa;
-}
-
-.text-black {
-  color: #333333;
-}
-
-.text-white {
-  color: #ffffff;
-}
-
-// 背景色
-.bg-red {
-  background-color: #e54d42;
-  color: #ffffff;
-}
-
-.bg-orange {
-  background-color: #f37b1d;
-  color: #ffffff;
-}
-
-.bg-yellow {
-  background-color: #fbbd08;
-  color: #333333;
-}
-
-.bg-olive {
-  background-color: #8dc63f;
-  color: #ffffff;
-}
-
-.bg-green {
-  background-color: #39b54a;
-  color: #ffffff;
-}
-
-.bg-cyan {
-  background-color: #1cbbb4;
-  color: #ffffff;
-}
-
-.bg-blue {
-  background-color: #0081ff;
-  color: #ffffff;
-}
-
-.bg-purple {
-  background-color: #6739b6;
-  color: #ffffff;
-}
-
-.bg-mauve {
-  background-color: #9c26b0;
-  color: #ffffff;
-}
-
-.bg-pink {
-  background-color: #e03997;
-  color: #ffffff;
-}
-
-.bg-brown {
-  background-color: #a5673f;
-  color: #ffffff;
-}
-
-.bg-grey {
-  background-color: #8799a3;
-  color: #ffffff;
-}
-
-.bg-gray {
-  background-color: #f0f0f0;
-  color: #333333;
+  @each $color in $red {
+    .bg-red-#{$i} {
+      color: $color;
+    }
+  }
+  @each $color in $yellow {
+    .bg-yellow-#{$i} {
+      color: $color;
+    }
+  }
+  @each $color in $green {
+    .bg-green-#{$i} {
+      color: $color;
+    }
+  }
+  @each $color in $blue {
+    .bg-blue-#{$i} {
+      color: $color;
+    }
+  }
+  @each $color in $indigo {
+    .bg-indigo-#{$i} {
+      color: $color;
+    }
+  }
+  @each $color in $purple {
+    .bg-purple-#{$i} {
+      color: $color;
+    }
+  }
+  @each $color in $pink {
+    .bg-pink-#{$i} {
+      color: $color;
+    }
+  }
 }
 
 .bg-black {
   background-color: #333333;
-  color: #ffffff;
+
 }
 
 .bg-white {
   background-color: #ffffff;
-  color: #666666;
+
 }
+
+
+/**
+ * ============================================
+ * border 边框
+ * ============================================
+ * 1. radius
+ *
+ */
+
+@for $i from 1 to 101 {
+  .radius-#{$i} {
+    border-radius: $i * 1px;
+  }
+}
+
+
