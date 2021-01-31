@@ -22,11 +22,6 @@
  *
  */
 
-page {
-  position: relative;
-  width: 100%;
-  min-height: 100%;
-}
 
 $gray: #F9FAFB, #F3F4F6, #E5E7EB, #D1D5DB, #9CA3AF, #6B7280, #4B5563, #374151, #1F2937, #111827;
 $red: #FEF2F2, #FEE2E2, #FECACA, #FCA5A5, #F87171, #EF4444, #DC2626, #B91C1C, #991B1B, #7F1D1D;
@@ -571,45 +566,29 @@ $pink: #FDF2F8, #FCE7F3, #FBCFE8, #F9A8D4, #F472B6, #EC4899, #DB2777, #BE185D, #
 
 
 @for $i from 1 to 11 {
-  @each $color in $gray {
-    .text-gray-#{$i} {
-      color: $color;
-    }
+  .text-gray-#{$i} {
+    color: nth($gray, $i);
   }
-  @each $color in $red {
-    .text-red-#{$i} {
-      color: $color;
-    }
+  .text-red-#{$i} {
+    color: nth($red, $i);
   }
-  @each $color in $yellow {
-    .text-yellow-#{$i} {
-      color: $color;
-    }
+  .text-yellow-#{$i} {
+    color: nth($yellow, $i);
   }
-  @each $color in $green {
-    .text-green-#{$i} {
-      color: $color;
-    }
+  .text-green-#{$i} {
+    color: nth($green, $i);
   }
-  @each $color in $blue {
-    .text-blue-#{$i} {
-      color: $color;
-    }
+  .text-blue-#{$i} {
+    color: nth($blue, $i);
   }
-  @each $color in $indigo {
-    .text-indigo-#{$i} {
-      color: $color;
-    }
+  .text-indigo-#{$i} {
+    color: nth($indigo, $i);
   }
-  @each $color in $purple {
-    .text-purple-#{$i} {
-      color: $color;
-    }
+  .text-purple-#{$i} {
+    color: nth($purple, $i);
   }
-  @each $color in $pink {
-    .text-pink-#{$i} {
-      color: $color;
-    }
+  .text-pink-#{$i} {
+    color: nth($pink, $i);
   }
 }
 
@@ -669,46 +648,31 @@ $pink: #FDF2F8, #FCE7F3, #FBCFE8, #F9A8D4, #F472B6, #EC4899, #DB2777, #BE185D, #
 
 
 @for $i from 1 to 11 {
-  @each $color in $gray {
-    .bg-gray-#{$i} {
-      color: $color;
-    }
+  .bg-gray-#{$i} {
+    background-color: nth($gray, $i);
   }
-  @each $color in $red {
-    .bg-red-#{$i} {
-      color: $color;
-    }
+  .bg-red-#{$i} {
+    background-color: nth($red, $i);
   }
-  @each $color in $yellow {
-    .bg-yellow-#{$i} {
-      color: $color;
-    }
+  .bg-yellow-#{$i} {
+    background-color: nth($yellow, $i);
   }
-  @each $color in $green {
-    .bg-green-#{$i} {
-      color: $color;
-    }
+  .bg-green-#{$i} {
+    background-color: nth($green, $i);
   }
-  @each $color in $blue {
-    .bg-blue-#{$i} {
-      color: $color;
-    }
+  .bg-blue-#{$i} {
+    background-color: nth($blue, $i);
   }
-  @each $color in $indigo {
-    .bg-indigo-#{$i} {
-      color: $color;
-    }
+  .bg-indigo-#{$i} {
+    background-color: nth($indigo, $i);
   }
-  @each $color in $purple {
-    .bg-purple-#{$i} {
-      color: $color;
-    }
+  .bg-purple-#{$i} {
+    background-color: nth($purple, $i);
   }
-  @each $color in $pink {
-    .bg-pink-#{$i} {
-      color: $color;
-    }
+  .bg-pink-#{$i} {
+    background-color: nth($pink, $i);
   }
+
 }
 
 .bg-black {
