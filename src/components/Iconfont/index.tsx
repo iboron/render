@@ -12,7 +12,7 @@ interface Props {
 
 export default ({icon, size, color, ...rest}: Props) => {
   return <Text
-    className={`iconfont icon-${icon} font-${size} text-${color}`}
+    className={`iconfont icon-${icon} font-${size} text-${color}-6`}
     {...rest}
   />;
 };

@@ -15,66 +15,49 @@ export default () => {
   }, [])
 
   return (
-    <View>
+    <View className={'m-11'}>
 
       {/* 信息模块 */}
-      <View className={'bg-white margin-12 padding-16 radius-4'}>
+      <View className={'p-12 radius-24 bg-gray-2'}>
 
         {/*店铺名称*/}
-        <View className={'flex margin-bottom-12'}>
-          <View className={'flex-3'}>
-            <Image src={IconSvg} className={'width-29'} mode={"widthFix"}/>
+        <View className={'flex mb-12 content-center items-center'}>
+          <View className={'flex-3 '}>
+            <Image src={IconSvg} className={'w-40'} mode={"widthFix"}/>
           </View>
-          <View className={'flex-21'}>
+          <View className={'flex-13  pl-6'}>
             <Text className={'text-20 text-black'}>
               {store.title}
+            </Text>
+          </View>
+          <View className={'flex-8 text-right'}>
+            <Text className={'bg-gray-3 py-6 px-12 radius-32 text-gray-7'}>
+              新街口店
             </Text>
           </View>
         </View>
 
         {/*店铺地址*/}
-        <View className={'flex margin-bottom-12'}>
-          <View className={'flex-12'}>
-            <View className={'text-gray text-14 margin-bottom-2'}>
-              <Iconfont
-                className={'margin-right-2'}
-                icon={"location"}
-                size={30}
-              />
-              海峡云谷科技园
+        <View className={'mb-12 text-gray-6'}>
+          <View className={'flex mb-8'}>
+            <View className={'flex-4  text-16'}>
+              地址:
             </View>
-
-            <View className={'text-gray text-14'}>
-              <Iconfont icon={"phone"} size={30} className={'margin-right-2'}/>
-              0517-18015193481
+            <View className={'flex-20 text-16'}>
+              江苏省南京市建邺区海峡云谷科技园5号楼520室 <Iconfont icon={"location"} size={16} color={"blue"}/>
             </View>
           </View>
-          <View className={'flex-6 text-16 text-grey text-center'}>
-            <Iconfont icon={"location"} size={16}/>
-            <View>导航</View>
-          </View>
-          <View className={'flex-6 text-16 text-grey text-center'}>
-            <Iconfont icon={"phone"} size={16}/>
-            <View>客服</View>
-          </View>
-        </View>
-
-        {/*更多店铺*/}
-        <View className={'flex bg-gray padding-4'}>
-          <View className={'flex-12'}>
-            <View className={'text-grey'}>商家还有多家分店</View>
-          </View>
-          <View className={'flex-12 text-right'}>
-            <View className={'text-blue'}>
-              立即前往
-              <Iconfont icon={"right"}/>
+          <View className={'flex'}>
+            <View className={'flex-4   text-16'}>
+              电话:
+            </View>
+            <View className={'flex-20 text-16'}>
+              0517-18015193481 <Iconfont icon={"phone"} size={16} color={"blue"}/>
             </View>
           </View>
         </View>
 
       </View>
-
-
       {/* 房型标签 */}
 
 
