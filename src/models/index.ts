@@ -1,23 +1,26 @@
-import {init, RematchDispatch, RematchRootState} from '@rematch/core'
+import {init, RematchDispatch, Models} from '@rematch/core'
 import immerPlugin from '@rematch/immer'
 import {store} from './store'
-import {Model} from '@/type/models'
 
-// 数据
-export const storeState = init<Model>({
-  // 模块
-  models: {
-    store: store,
-  },
-  // 插件
+// 类型
+export interface RootModel extends Models<RootModel> {
+  store: typeof store
+}
+
+export type Dispatch = RematchDispatch<RootModel>
+export type Store = RootModel['store']['state']
+
+
+// 数据导出
+export const models: RootModel = {store}
+export const storeState = init({
+  models,
   plugins: [
     immerPlugin()
   ],
 })
 
 
-export type Store = Model
-export type Dispatch = RematchDispatch<Model>
-export type RootState = RematchRootState<Model>
+
 
 
