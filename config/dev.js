@@ -6,7 +6,7 @@ module.exports = {
   },
   copy: {
     patterns: [
-      { from: 'src/ext.json', to: 'dist/ext.json' }
+      { from: 'src/ext.json', to: 'dist/weapp/ext.json' }
     ],
     options: {
 
