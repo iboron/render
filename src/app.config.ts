@@ -1,7 +1,7 @@
 export default {
-  pages: ["pages/hotel/index", "pages/user/index", "pages/order/index"],
+  pages: ["pages/hotel/index", "pages/user/index", "pages/order/index", "pages/login/index"],
   window: {
-    navigationBarBackgroundColor: '#ffffff',
+    navigationBarBackgroundColor: '#F9FAFB',
     navigationBarTextStyle: 'black',
   },
   "tabBar": {
