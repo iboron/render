@@ -4,6 +4,7 @@
   "pages": [
     "pages/hotel/index",
     "pages/user/index",
+    "pages/login/index",
     "pages/order/index"
   ],
   "tabBar": {

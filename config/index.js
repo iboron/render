@@ -11,7 +11,7 @@ const config = {
     828: 1.81 / 2
   },
   sourceRoot: 'src',
-  outputRoot: 'dist',
+  outputRoot: `dist/${process.env.TARO_ENV}`,
   alias: {
     '@/components': path.resolve(__dirname, '..', 'src/components'),
     '@/models': path.resolve(__dirname, '..', 'src/models'),
@@ -19,8 +19,7 @@ const config = {
     '@/type': path.resolve(__dirname, '..', 'src/type'),
   },
   plugins: [],
-  defineConstants: {
-  },
+  defineConstants: {},
   copy: {
     patterns: [],
     options: {}
