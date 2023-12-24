@@ -1,11 +1,3 @@
-# <p align="center"> @jetpomelo/template </p>
+# Render
 
-### TODO
-
-- 登录/注册
-- 首页信息补充
-- 房型预订
-- 订单管理
-- 走一遍流程
-- 其他页面补充
-
+react 代码渲染
