@@ -1,28 +1,27 @@
+import {useEffect, useState} from 'react'
 import {transform} from "sucrase";
 import {Helmet} from "react-helmet";
 
 function App() {
 
-    const compiledCode = transform(`
-     import React from 'https://esm.sh/react@18.2.0'
-     import ReactDOM from 'https://esm.sh/react-dom@18.2.0'
-     import {Button} from 'https://esm.sh/@mui/material@5.15.1'
-     const A = ()=>(<Button >这fweq</div>)
-    
-ReactDOM.createRoot(document.getElementById('root')).render(
-     <A/>
-)
-    `, {transforms: ["jsx"], production: true,}).code
+    const [reactTemplate, setReactTemplate] = useState('')
 
-    return (
-        <>
-            <Helmet>
-                <script type={'module'}>
-                    {compiledCode}
-                </script>
-            </Helmet>
-        </>
-    )
+    // 信息监听
+    useEffect(() => {
+        window.addEventListener('message', (event) => {
+            if (event?.data?.template) {
+                setReactTemplate(transform(event.data.template, {transforms: ["jsx"], production: true,}).code)
+            }
+        }, false);
+    }, [window.addEventListener]);
+
+    return (<>
+        <Helmet>
+            <script type={'module'}>
+                {reactTemplate}
+            </script>
+        </Helmet>
+    </>)
 }
 
 export default App
