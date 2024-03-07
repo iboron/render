@@ -1,16 +1,15 @@
-import {ReactNode} from 'react'
-import '../globals.css'
-import AppProvider from "@/components/AppProvier";
+import React from 'react';
+import {AntdRegistry} from '@ant-design/nextjs-registry';
+import 'antd/dist/reset.css';
 
-interface Props {
-    children: ReactNode
-}
+const RootLayout = ({children}: React.PropsWithChildren) => (
+    <html lang="zh-cn">
+    <body>
+    <AntdRegistry>{children}</AntdRegistry>
+    </body>
+    </html>
+);
 
-export default function RootLayout(props: Props) {
+export default RootLayout;
 
-    return (
-        <html lang="zh-CN">
-        <body><AppProvider>{props.children}</AppProvider></body>
-        </html>
-    )
-}
+
